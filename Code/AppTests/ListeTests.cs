@@ -1,6 +1,71 @@
 [TestClass]
 public class ListeTests
 {
+
+    [TestMethod]
+    public void TP_Liste()
+    {
+        var entiers=Enumerable.Range(1,10000);
+        // Créer une liste à partir de entiers avec des nombres aléatoire
+        var r=new Random();
+        // r.Next(0,200)  genére un nombre aléatoire
+        var entiersAleatoires=entiers.Select(c=>r.Next(0,200)).Distinct().ToList();
+        // sur entiersEleatoires => proportion dont le cosinus <0.1
+        var prop=entiersAleatoires.Select(c=>Math.Cos(c)).Where(c=>c<0.1).Count()/entiersAleatoires.Count();
+    }
+
+    [TestMethod]
+    public void IEnumerable()
+    {
+        
+        var entiers =new List<int>(){1,7,3,2,3,5,9,2,5};
+        var petitsEniers=entiers // 1,7,3,2,3,5,9,2,5
+                .Skip(2)// 3,2,3,5,9,2,5
+                .Take(10) // 3,2,3,5,9,2,5
+                .Where(c=>
+            c<6
+            )   // 3,2,3,5,2,5
+            
+             .ToList() //  3,2,3,5,2,5
+             
+             .Take(2) //3,2   .ToArray() matérialise les éléments sélectionnés en mémoire
+            ;
+        var count=petitsEniers.Count(); 
+        entiers.Add(4);
+        count=petitsEniers.Count();
+        count=petitsEniers.Count();
+
+        string s="toto";
+        foreach(var e in s)
+        {
+            
+        }
+
+        var enumerateurDesElementsDeS=s.GetEnumerator()
+
+
+
+
+
+    }
+
+
+
+
+
+    [TestMethod]
+    public void StringEnumerable()
+    {
+        var texte="Le chien a mordu le facteur";
+        var sansEspacces=texte.Where(c=>c!=' ');
+       var  groupes= sansEspacces.GroupBy(c=>c);
+       var groupesOrdones=groupes.OrderBy(g=>g.Key);
+       var resultat=groupesOrdones.Select(g=>new{ lettre=g.Key,nombre =g.Count()});
+       var top =resultat.OrderByDescending(c=>c.nombre).First();
+    }
+
+
+
     [TestMethod]
     public void Liste()
     {
