@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\web.csproj": {}
+    "C:\\Users\\Dom\\Desktop\\Formations\\Formation CSharp - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\metier.csproj": {
+    "C:\\Users\\Dom\\Desktop\\Formations\\Formation CSharp - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\metier.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\metier.csproj",
+        "projectUniqueName": "C:\\Users\\Dom\\Desktop\\Formations\\Formation CSharp - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\metier.csproj",
         "projectName": "metier",
-        "projectPath": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\metier.csproj",
+        "projectPath": "C:\\Users\\Dom\\Desktop\\Formations\\Formation CSharp - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\metier.csproj",
         "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\obj\\",
+        "outputPath": "C:\\Users\\Dom\\Desktop\\Formations\\Formation CSharp - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dom\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\web.csproj": {
+    "C:\\Users\\Dom\\Desktop\\Formations\\Formation CSharp - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\web.csproj",
+        "projectUniqueName": "C:\\Users\\Dom\\Desktop\\Formations\\Formation CSharp - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\web.csproj",
         "projectName": "web",
-        "projectPath": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\web.csproj",
+        "projectPath": "C:\\Users\\Dom\\Desktop\\Formations\\Formation CSharp - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\web.csproj",
         "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\obj\\",
+        "outputPath": "C:\\Users\\Dom\\Desktop\\Formations\\Formation CSharp - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dom\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\metier.csproj": {
-                "projectPath": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\metier.csproj"
+              "C:\\Users\\Dom\\Desktop\\Formations\\Formation CSharp - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\metier.csproj": {
+                "projectPath": "C:\\Users\\Dom\\Desktop\\Formations\\Formation CSharp - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\metier\\metier.csproj"
               }
             }
           }

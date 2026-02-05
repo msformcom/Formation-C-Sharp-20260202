@@ -7,6 +7,18 @@
 </head>
 <body>
   <h1>Ma liste</h1>
-  <div>{{liste?.libele}}</div>
+  @if(liste()){
+    <div>Libelé : {{liste()?.libele}}</div>
+    @for( e of liste()?.elements;track e){
+      <div (click)="e.achete=!e.achete"
+           [style.text-decoration]="e.achete? 'line-through':''"  >
+        {{e.nombre}} {{e.libele}}
+      </div>
+    }
+  }@else {
+    <div>Attente</div>
+  }
+
+
 </body>
 </html>

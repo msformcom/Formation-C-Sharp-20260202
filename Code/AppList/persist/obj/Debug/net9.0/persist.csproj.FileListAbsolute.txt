@@ -1,0 +1,16 @@
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\bin\Debug\net9.0\persist.deps.json
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\bin\Debug\net9.0\persist.dll
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\bin\Debug\net9.0\persist.pdb
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\bin\Debug\net9.0\metier.dll
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\bin\Debug\net9.0\metier.pdb
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\obj\Debug\net9.0\persist.csproj.AssemblyReference.cache
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\obj\Debug\net9.0\persist.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\obj\Debug\net9.0\persist.AssemblyInfoInputs.cache
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\obj\Debug\net9.0\persist.AssemblyInfo.cs
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\obj\Debug\net9.0\persist.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\obj\Debug\net9.0\persist.sourcelink.json
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\obj\Debug\net9.0\persist.csproj.Up2Date
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\obj\Debug\net9.0\persist.dll
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\obj\Debug\net9.0\refint\persist.dll
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\obj\Debug\net9.0\persist.pdb
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\persist\obj\Debug\net9.0\ref\persist.dll
