@@ -16,4 +16,9 @@ class Chien : Vertebre, IAnimalDomestique, IVendable
     }
 
     public decimal Prix { get; set ; }
+
+    public void Vendre()
+    {
+        throw new NotImplementedException();
+    }
 }

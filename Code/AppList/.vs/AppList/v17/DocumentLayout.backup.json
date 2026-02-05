@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C77C529-653B-4280-8E45-47550B333A79}|ui\\ui.csproj|c:\\users\\dom\\desktop\\formations\\formation c# - 20260202\\formation c sharp 20260202\\code\\applist\\ui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C77C529-653B-4280-8E45-47550B333A79}|ui\\ui.csproj|solutionrelative:ui\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D1983D-4B25-4D3D-A606-70769AD77930}|web\\web.csproj|c:\\users\\dom\\desktop\\formations\\formation c# - 20260202\\formation c sharp 20260202\\code\\applist\\web\\web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C2D1983D-4B25-4D3D-A606-70769AD77930}|web\\web.csproj|solutionrelative:web\\web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D1983D-4B25-4D3D-A606-70769AD77930}|web\\web.csproj|c:\\users\\dom\\desktop\\formations\\formation c# - 20260202\\formation c sharp 20260202\\code\\applist\\web\\wwwroot\\index.html||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{C2D1983D-4B25-4D3D-A606-70769AD77930}|web\\web.csproj|solutionrelative:web\\wwwroot\\index.html||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D1983D-4B25-4D3D-A606-70769AD77930}|web\\web.csproj|c:\\users\\dom\\desktop\\formations\\formation c# - 20260202\\formation c sharp 20260202\\code\\applist\\web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D1983D-4B25-4D3D-A606-70769AD77930}|web\\web.csproj|solutionrelative:web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C77C529-653B-4280-8E45-47550B333A79}|ui\\ui.csproj|c:\\users\\dom\\desktop\\formations\\formation c# - 20260202\\formation c sharp 20260202\\code\\applist\\ui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4C77C529-653B-4280-8E45-47550B333A79}|ui\\ui.csproj|solutionrelative:ui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "web\\wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\wwwroot\\index.html",
+              "RelativeToolTip": "web\\wwwroot\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-02-04T10:45:35.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\Program.cs",
+              "RelativeDocumentMoniker": "web\\Program.cs",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\Program.cs",
+              "RelativeToolTip": "web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T10:40:32.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "web",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\web.csproj",
+              "RelativeDocumentMoniker": "web\\web.csproj",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\web\\web.csproj",
+              "RelativeToolTip": "web\\web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-04T10:43:35.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\ui\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ui\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\ui\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "ui\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAApwBUAAAAqAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T10:35:28.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\ui\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ui\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\Formations\\Formation C# - 20260202\\Formation C Sharp 20260202\\Code\\AppList\\ui\\MainWindow.xaml",
+              "RelativeToolTip": "ui\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-04T10:24:57.72Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

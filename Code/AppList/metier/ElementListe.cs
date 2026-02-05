@@ -1,3 +1,4 @@
+namespace Metier;
 public class ElementListe
 {
     public ElementListe(string libele, int nombre=1) // nombre est optionel
@@ -5,14 +6,14 @@ public class ElementListe
         this.Nombre=nombre;
         this.Libele = libele;
     }
-    public bool Achete { get; set; } = false;
+    public bool Achete { get; internal  set; } = false;
 
     #region Libele
     private string _Libele;
     public string Libele
     {
         get { return _Libele; }
-        private set
+        internal set
         {
             if (string.IsNullOrWhiteSpace(value))
             {

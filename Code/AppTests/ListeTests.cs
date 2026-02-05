@@ -35,13 +35,18 @@ public class ListeTests
         count=petitsEniers.Count();
         count=petitsEniers.Count();
 
-        string s="toto";
+        string s="toto"; //       t    o     t    o
         foreach(var e in s)
         {
             
         }
 
-        var enumerateurDesElementsDeS=s.GetEnumerator()
+        // GetEnumerator est le membre obligatoire de IEnumerable
+        var enumerateurDesElementsDeS=s.GetEnumerator();
+        while (enumerateurDesElementsDeS.MoveNext())
+        {
+            var e=enumerateurDesElementsDeS.Current;
+        }
 
 
 
@@ -49,7 +54,40 @@ public class ListeTests
 
     }
 
+    [TestMethod]
+    public void MyTestMethod()
+    {
+        // Generator
+        IEnumerable<int> GetAllEntiers()
+        {
+           var i=0;
+            while (i<=int.MaxValue)
+            {
+                yield return i;
+                i++;
+            }
+        }
 
+        var l=GetAllEntiers();
+        var enumerateur=l.GetEnumerator();
+
+        // afficher 10
+        void AfficherElements(int n)
+        {
+            for(var i = 0; i < n; i++)
+            {
+                enumerateur.MoveNext();
+                Console.WriteLine(enumerateur.Current);
+            }           
+        }
+
+        AfficherElements(2);
+        AfficherElements(2);
+
+
+
+
+    }
 
 
 

@@ -14,11 +14,24 @@ public class ClasseTests
         {
             //var v=((Chat)vertebre1);
         }
+        if(vertebre1 is IAnimalDomestique)
+        {
+            
+        }
 
         Object o=new Chien();
 
         var chat=((Chat)o); // Erreur
         var chien=((Chien)o); // marche
         var v=(Vertebre)o; // marche
+
+
+
+        // Choix de mon animal domestique
+        IAnimalDomestique monAnimal=new Araignee();
+
+  
+
+
     }
 }
