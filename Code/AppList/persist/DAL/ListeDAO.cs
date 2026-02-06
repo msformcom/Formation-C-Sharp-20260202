@@ -16,5 +16,5 @@ public class ListeDAO
     // Ajouter une propriété de navigation (coté n)
     // IEnumerable => Count, where
     // Remove, Add, Contains
-    public ICollection<ElementListeDAO> Elements { get; set; }
+    public HashSet<ElementListeDAO> Elements { get; set; }=new HashSet<ElementListeDAO>();
 }

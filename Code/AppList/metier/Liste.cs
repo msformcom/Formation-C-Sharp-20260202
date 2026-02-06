@@ -6,19 +6,22 @@ namespace Metier;
 [DataContract]  // Déclarer que cette classe est sérialisable
 public class Liste
 {
+    // Sur les POCO, constructeur vide iternal pour permettre la creation d'instances 
+    // Par le mapper
+    internal Liste(){}
     public Liste(string libele)
     {
         this.Libele = libele;
         this.MyElements = new();
         this.MyElements.CollectionChanged += (o, e) =>
         {
-            
+
         };
     }
 
     #region Libele
 
-    [DataMember(Name ="Label")] // Permet de customiser la serialisation
+    [DataMember(Name = "Label")] // Permet de customiser la serialisation
     private string _Libele;
 
     public string Libele
@@ -35,8 +38,8 @@ public class Liste
     }
     #endregion
 
-      [DataMember(Name ="Elements")]
-    private ObservableCollection<ElementListe> MyElements { get; set; }
+    [DataMember(Name = "Elements")]
+    internal ObservableCollection<ElementListe> MyElements { get; set; }
 
     public IEnumerable<ElementListe> Elements
     {

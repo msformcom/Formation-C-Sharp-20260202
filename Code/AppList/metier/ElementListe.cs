@@ -5,6 +5,7 @@ namespace Metier;
 [DataContract]
 public class ElementListe
 {
+    internal ElementListe(){}
     public ElementListe(string libele, int nombre = 1) // nombre est optionel
     {
         this.Nombre = nombre;
@@ -12,11 +13,21 @@ public class ElementListe
     }
 
     [DataMember(Name = "Done")]
-    public bool Achete { get; internal set; } = false;
+    #region Achete
+    internal bool _Achete;
+    public bool Achete
+    {
+        get { return _Achete; }
+        set { 
+    // TODO Check value
+    _Achete = value; }
+    }
+    #endregion
+    
 
     #region Libele
     [DataMember(Name = "Label")]
-    private string _Libele;
+    internal string _Libele;
     public string Libele
     {
         get { return _Libele; }
@@ -34,7 +45,7 @@ public class ElementListe
     #region Nombre
     
     [DataMember(Name = "Number")]
-    private int _Nombre;
+    internal int _Nombre;
     public int Nombre
     {
         get { return _Nombre; }

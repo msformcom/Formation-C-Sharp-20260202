@@ -1,8 +1,16 @@
 // Cette classe sert à structurer et accéder aux données d' une table dans la BDD
-public  class ElementListeDAO
-{
-    public Guid Id { get; set; }= Guid.NewGuid();
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
+[Table("TBL_Elements")]
+public class ElementListeDAO
+{
+    [Key]
+    [Column("PK_Elements")]
+    public Guid Id { get; set; } = Guid.NewGuid();
+
+    [ForeignKey("Liste")]
+    [Column("FK_Liste")]
     public Guid IdListe { get; set; }
 
     // Propriété de navigation (coté 1) vers la Liste associée
@@ -10,7 +18,10 @@ public  class ElementListeDAO
 
 
     public bool Achete { get; set; }
+
+
+    [MaxLength(50)]
     public string Libele { get; set; }
     public int Nombre { get; set; }
-    public DateTime DateCreation { get; set; }=DateTime.Now;
+    public DateTime DateCreation { get; set; } = DateTime.Now;
 }
