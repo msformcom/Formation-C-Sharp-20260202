@@ -1,6 +1,7 @@
 // Injecteur de dépendance
 // Attention ! Les classes de Dependencyinjection ne sont pas fournies par défaut
 // dotnet add package "Microsoft.Extensions.DependencyInjection"
+using System.Reflection;
 using Metier;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -36,7 +37,13 @@ public class PersistTests
 
         // Ajout d'une dépendance associée à IPersist<Guid,Liste,string>
         // qui est dirigée vers PersistListeToDisk en mod singleton
-        services.AddSingleton<IPersist<Guid, Liste, string>, PersistListeToDisk>();
+        var chaineClassPersistence=config.GetSection("PersistanceClass").Value;
+        // Chargement de l'assembly dans laquelle se trouve la classe de persistence
+        var assemblyPersiste=Assembly.Load("persist");
+        // Chercher le type de la classe dans ml'assembly
+        var typeClassPersistence=assemblyPersiste.GetType(chaineClassPersistence);
+
+        services.AddSingleton(typeof(IPersist<Guid,Liste,string>),typeClassPersistence);
         services.AddSingleton<IConfiguration>(config);
         services.AddSingleton<ILoggerFactory>(loggerFactory);
         services.AddLogging();
@@ -51,8 +58,19 @@ public class PersistTests
     public async Task PersistTest()
     {
         var persist = DI.GetService<IPersist<Guid, Liste, string>>();
-        var l=new Liste("Toto");
-        l.AddElement(new ElementListe("Pate",10));
-        var r=await  persist.AddAsync(l, Guid.NewGuid());
+        var l = new Liste("Toto");
+        l.AddElement(new ElementListe("Pate", 10));
+
+        var id = Guid.NewGuid();
+        var r = await persist.AddAsync(l, id);
+
+        var listeRestauree = await persist.GetAsync(id);
+
+        Assert.AreEqual(l.Libele, listeRestauree.Libele);
+        Assert.AreEqual(l.Elements.Count(), listeRestauree.Elements.Count());
+
+        await persist.RemoveAsync(id);
+
+
     }
 }

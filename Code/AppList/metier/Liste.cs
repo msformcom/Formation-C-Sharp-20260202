@@ -1,5 +1,8 @@
+using System.Runtime.Serialization;
+
 namespace Metier;
 
+[DataContract]  // Déclarer que cette classe est sérialisable
 public class Liste
 {
     public Liste(string libele)
@@ -9,7 +12,10 @@ public class Liste
     }
 
     #region Libele
+
+    [DataMember(Name ="Label")] // Permet de customiser la serialisation
     private string _Libele;
+
     public string Libele
     {
         get { return _Libele; }
@@ -24,6 +30,7 @@ public class Liste
     }
     #endregion
 
+      [DataMember(Name ="Elements")]
     private List<ElementListe> MyElements { get; set; }
 
     public IEnumerable<ElementListe> Elements

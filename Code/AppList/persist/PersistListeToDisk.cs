@@ -12,7 +12,8 @@ public class PersistListeToDisk : IPersist<Guid, Liste, string>
     private readonly IConfiguration config;
     private readonly ILogger<PersistListeToDisk> logger;
 
-
+        // Serialier la liste => json, xml, binary
+    DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Liste));
 
     // IConfiguration sera fourni par l'injection de dépendance
     // Au moment ou il construira le PersistListeToDisk
@@ -25,8 +26,8 @@ public class PersistListeToDisk : IPersist<Guid, Liste, string>
     }
     public Task<Liste> AddAsync(Liste o, Guid id)
     {
-        // Serialier la liste => json, xml, binary
-        DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Liste));
+
+
 
         // Ouvrir un fichier => emplacement du fichier enregistré sous une clé ListeFolder dans la config
         string pathToFolder = config.GetSection("ListeFolder").Value;
@@ -77,14 +78,48 @@ public class PersistListeToDisk : IPersist<Guid, Liste, string>
         return Task.FromResult(o);
     }
 
-    public Task<Liste> GetAsync(Guid id)
+    public async Task<Liste> GetAsync(Guid id)
     {
-        throw new NotImplementedException();
+                // Ouvrir un fichier => emplacement du fichier enregistré sous une clé ListeFolder dans la config
+        string pathToFolder = config.GetSection("ListeFolder").Value;
+        string pathToFile = Path.Combine(pathToFolder, id.ToString());
+
+        //  if(File.Exists(pathToFile))
+        var fi=new FileInfo(pathToFile); // DirectoryInfo
+        if (!fi.Exists)
+        {
+            throw new FileNotFoundException();
+        }
+         // Le using va appeler Dispose à la sortie du bloc
+         // et libérer le fichier
+        using(var fileStream = fi.OpenRead())
+        {
+            // Afin d'exécuter la déserialisation dans un thread séparé
+            return await Task.Run(() =>
+            {
+                var liste=(Liste)serializer.ReadObject(fileStream);
+                if (liste == null)
+                {
+                    throw new NullReferenceException();
+                }
+                logger.LogInformation($"{id} restaurée avec succès");
+                return liste;               
+            });
+
+
+        }
+
     }
 
     public Task RemoveAsync(Guid id)
     {
-        throw new NotImplementedException();
+        string pathToFolder = config.GetSection("ListeFolder").Value;
+        string pathToFile = Path.Combine(pathToFolder, id.ToString());
+        File.Delete(pathToFile);
+        // var fi=new FileInfo(pathToFile);
+        // fi.Delete();
+
+        return Task.CompletedTask;
     }
 
     public Task<IEnumerable<(Guid Id, string search)>> SearchAsync(string texte)

@@ -1,14 +1,21 @@
+using System.Runtime.Serialization;
+
 namespace Metier;
+
+[DataContract]
 public class ElementListe
 {
-    public ElementListe(string libele, int nombre=1) // nombre est optionel
+    public ElementListe(string libele, int nombre = 1) // nombre est optionel
     {
-        this.Nombre=nombre;
+        this.Nombre = nombre;
         this.Libele = libele;
     }
-    public bool Achete { get; internal  set; } = false;
+
+    [DataMember(Name = "Done")]
+    public bool Achete { get; internal set; } = false;
 
     #region Libele
+    [DataMember(Name = "Label")]
     private string _Libele;
     public string Libele
     {
@@ -25,6 +32,8 @@ public class ElementListe
     #endregion
 
     #region Nombre
+    
+    [DataMember(Name = "Number")]
     private int _Nombre;
     public int Nombre
     {

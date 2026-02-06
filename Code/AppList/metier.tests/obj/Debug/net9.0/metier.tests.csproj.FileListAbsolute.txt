@@ -180,9 +180,7 @@ C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\metier.tests.runtimeconfig.json
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\metier.tests.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\metier.tests.pdb
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.ApplicationInsights.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -190,21 +188,6 @@ C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Graph.Core.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.IdentityModel.Validators.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Kiota.Abstractions.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Kiota.Authentication.Azure.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Kiota.Http.HttpClientLibrary.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Kiota.Serialization.Form.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Kiota.Serialization.Json.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Kiota.Serialization.Multipart.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Kiota.Serialization.Text.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Testing.Extensions.Telemetry.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Testing.Extensions.TrxReport.Abstractions.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Testing.Extensions.VSTestBridge.dll
@@ -219,10 +202,6 @@ C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.Common.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Newtonsoft.Json.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Std.UriTemplate.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\System.ClientModel.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\System.Memory.Data.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\cs\Microsoft.Testing.Extensions.Telemetry.resources.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\de\Microsoft.Testing.Extensions.Telemetry.resources.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\es\Microsoft.Testing.Extensions.Telemetry.resources.dll
@@ -387,3 +366,4 @@ C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Console.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
