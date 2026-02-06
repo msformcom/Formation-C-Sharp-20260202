@@ -1,3 +1,4 @@
+using System.Data.Common;
 using AutoMapper;
 using Metier;
 using Microsoft.EntityFrameworkCore;
@@ -31,16 +32,27 @@ public class PersistListeToBDD : IPersist<Guid, Liste, string>
         listeAAjouter.Id=id;
         listeAAjouter.Libele=o.Libele;
 
+
+
         foreach(var dao in o.Elements
                     .Select(e=>new ElementListeDAO(){Achete=e.Achete, Libele=e.Libele,Nombre=e.Nombre }))
         {
             listeAAjouter.Elements.Add(dao);
         }
   
+        var changesToContext=db.ChangeTracker.Entries().ToList();
 
         // var dao=mapper.Map<ListeDAO>(liste);
           db.Listes.Add(listeAAjouter);
+          changesToContext=db.ChangeTracker.Entries().ToList();
           await db.SaveChangesAsync();
+          //changesToContext=db.ChangeTracker.Entries().ToList();
+
+        //listeAAjouter.Libele="Tata";
+        // listeAAjouter est marqué comme Modified
+        //   changesToContext=db.ChangeTracker.Entries().ToList();
+        //   await db.SaveChangesAsync();
+        //   changesToContext=db.ChangeTracker.Entries().ToList();
           return o;
     }
 
@@ -60,18 +72,48 @@ public class PersistListeToBDD : IPersist<Guid, Liste, string>
 
     }
 
-    public Task RemoveAsync(Guid id)
+    public async Task RemoveAsync(Guid id)
     {
-        throw new NotImplementedException();
+        // // recherche de la ListeDAO avec la méthode asynchone
+        // var dao=await db.Listes.FirstOrDefaultAsync(c=>c.Id==id);
+        // if (dao == null)
+        // {
+        //     throw new KeyNotFoundException();
+        // }
+        // db.Listes.Remove(dao);
+
+        // Création d'une entité avec l'Id à supprimer
+        var dao=new ListeDAO(){Id=id};
+        // Ajoyut au ChangeTracket avexc etat Deleted
+        db.Entry(dao).State=EntityState.Deleted;
+        // Le SaveChanges envoit le delete
+        await  db.SaveChangesAsync();
     }
 
-    public Task<IEnumerable<(Guid Id, string search)>> SearchAsync(string texte)
+    public Task<IEnumerable<(Guid , string )>> SearchAsync(string texte)
     {
-        throw new NotImplementedException();
+          var daos=db.Listes.Where(c=>c.Libele.Contains(texte)).AsEnumerable();
+          return Task.FromResult(daos.Select(c=>(c.Id,c.Libele)));
     }
 
-    public Task<Liste> UpdateAsync(Guid id, Liste o)
+    public async Task<Liste> UpdateAsync(Guid id, Liste o)
     {
-        throw new NotImplementedException();
+        // recherche de la ListeDAO avec la méthode asynchone
+        // var dao=await db.Listes.FirstOrDefaultAsync(c=>c.Id==id);
+        // if (dao == null)
+        // {
+        //     throw new KeyNotFoundException();
+        // }
+        // // Injecter les données du Poco dans le Dao
+        // mapper.Map(o,dao);
+
+        var dao=mapper.Map<ListeDAO>(o);
+        dao.Id=id;
+        db.ChangeTracker.Clear();
+        db.Entry(dao).State=EntityState.Modified;
+        // le dao avec les nouvelles valeurs injectées à partir de o
+        // est marqué comme modified => db.SavecChanges va envoyer un update
+        await db.SaveChangesAsync();
+        return o;
     }
 }

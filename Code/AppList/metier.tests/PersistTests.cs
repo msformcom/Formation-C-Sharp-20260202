@@ -51,7 +51,9 @@ public class PersistTests
         // Chercher le type de la classe dans ml'assembly
         var typeClassPersistence = assemblyPersiste.GetType(chaineClassPersistence);
 
-        services.AddSingleton(typeof(IPersist<Guid, Liste, string>), typeClassPersistence);
+        // AddSingleton => 1 seule instance pour toutes les demandes
+        // AddTransient => 1 instance par demande
+        services.AddTransient(typeof(IPersist<Guid, Liste, string>), typeClassPersistence);
         #endregion
 
         #region Config de la BDD
@@ -84,9 +86,9 @@ public class PersistTests
                 .ForMember(c => c.MyElements, o => o.MapFrom(c => c.Elements))
             ;
             options.CreateMap<ElementListe, ElementListeDAO>()
-                // .ForMember(c => c.Achete, o => o.MapFrom(c => c._Achete))
-                // .ForMember(c => c.Libele, o => o.MapFrom(c => c._Libele))
-                //  .ForMember(c => c.Nombre, o => o.MapFrom(c => c._Nombre))
+            // .ForMember(c => c.Achete, o => o.MapFrom(c => c._Achete))
+            // .ForMember(c => c.Libele, o => o.MapFrom(c => c._Libele))
+            //  .ForMember(c => c.Nombre, o => o.MapFrom(c => c._Nombre))
             .ReverseMap();
         });
 
@@ -100,13 +102,24 @@ public class PersistTests
 
 
     [TestMethod]
-    public async Task PersistTest()
+    public async Task Maj()
     {
         var persist = DI.GetService<IPersist<Guid, Liste, string>>();
+        var l = new Liste("Coucou");
+        await persist.UpdateAsync(Guid.Parse("be68e5fb-cc78-40d6-84b5-57693daafa11"), l);
+    }
+
+
+    [TestMethod]
+    public async Task PersistTest()
+    {
+
         var l = new Liste("Toto");
         l.AddElement(new ElementListe("Pate", 10));
 
         var id = Guid.NewGuid();
+
+        var persist = DI.GetService<IPersist<Guid, Liste, string>>();
         var r = await persist.AddAsync(l, id);
 
         var listeRestauree = await persist.GetAsync(id);
@@ -114,7 +127,18 @@ public class PersistTests
         Assert.AreEqual(l.Libele, listeRestauree.Libele);
         Assert.AreEqual(l.Elements.Count(), listeRestauree.Elements.Count());
 
+        persist = DI.GetService<IPersist<Guid, Liste, string>>();
+        var liste = await persist.SearchAsync("to");
+
+        listeRestauree.Libele = "tata";
+
+        persist = DI.GetService<IPersist<Guid, Liste, string>>();
+        await persist.UpdateAsync(id, listeRestauree);
+
+        persist = DI.GetService<IPersist<Guid, Liste, string>>();
         await persist.RemoveAsync(id);
+
+
 
 
     }
