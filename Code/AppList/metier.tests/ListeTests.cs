@@ -1,8 +1,19 @@
+using System.ComponentModel;
 using Metier;
 
 [TestClass]
 public class ListeTests
 {
+
+    [TestMethod]
+    public void ObservableCollectionTest()
+    {
+        var   c=new System.Collections.ObjectModel.ObservableCollection<int>();
+        c.CollectionChanged += (o, e) =>
+        {
+            
+        };
+    }
     [TestMethod]
     public void RetourElementsTest()
     {

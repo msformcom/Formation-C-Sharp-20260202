@@ -18,7 +18,7 @@ public class PersistTests
     public PersistTests()
     {
         var services = new ServiceCollection();
-
+        #region Config
         // ConfigBuilder permet de créer un ConfigManager qui 
         // Cherchera les infos de config dans un fichier xml
         var configBuilder = new ConfigurationBuilder();
@@ -26,27 +26,35 @@ public class PersistTests
         configBuilder.AddXmlFile("App.config");
         var config = configBuilder.Build();
         var test = config.GetSection("ListeFolder").Value;
+        services.AddSingleton<IConfiguration>(config);
+        #endregion
 
+        #region Journalisation
         // Création du systeme de journalisation
         var loggerFactory = LoggerFactory.Create(builder =>
         {
             builder.AddConsole();
         });
-
-
-
-        // Ajout d'une dépendance associée à IPersist<Guid,Liste,string>
-        // qui est dirigée vers PersistListeToDisk en mod singleton
-        var chaineClassPersistence=config.GetSection("PersistanceClass").Value;
-        // Chargement de l'assembly dans laquelle se trouve la classe de persistence
-        var assemblyPersiste=Assembly.Load("persist");
-        // Chercher le type de la classe dans ml'assembly
-        var typeClassPersistence=assemblyPersiste.GetType(chaineClassPersistence);
-
-        services.AddSingleton(typeof(IPersist<Guid,Liste,string>),typeClassPersistence);
-        services.AddSingleton<IConfiguration>(config);
         services.AddSingleton<ILoggerFactory>(loggerFactory);
         services.AddLogging();
+        #endregion
+
+        #region ClassesDePersistence
+        // Ajout d'une dépendance associée à IPersist<Guid,Liste,string>
+        // qui est dirigée vers PersistListeToDisk en mod singleton
+        var chaineClassPersistence = config.GetSection("PersistanceClass").Value;
+        // Chargement de l'assembly dans laquelle se trouve la classe de persistence
+        var assemblyPersiste = Assembly.Load("persist");
+        // Chercher le type de la classe dans ml'assembly
+        var typeClassPersistence = assemblyPersiste.GetType(chaineClassPersistence);
+
+        services.AddSingleton(typeof(IPersist<Guid, Liste, string>), typeClassPersistence);
+        #endregion
+
+#region Config de la BDD
+    services.AddDbContext<ListeContext>();
+#region
+
         // Création de l'objet Injecteur de Dépendance
         DI = services.BuildServiceProvider();
 

@@ -1,11 +1,30 @@
 using Metier;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using persist;
 
 public class PersistListeToBDD : IPersist<Guid, Liste, string>
 {
-    public Task<Liste> AddAsync(Liste o, Guid id)
+    private readonly ListeContext db;
+    private readonly ILogger<PersistListeToBDD> logger;
+
+
+    // On a besoin d'un ListeContext bien configuré
+    // On le demande à l'injection de dépeance
+    public PersistListeToBDD(ListeContext db, ILogger<PersistListeToBDD> logger)
     {
-        throw new NotImplementedException();
+        this.db = db;
+        this.logger = logger;
+    }
+    public async Task<Liste> AddAsync(Liste o, Guid id)
+    {
+        var listeAAjouter=new ListeDAO();
+        listeAAjouter.Id=id;
+        listeAAjouter.Libele=o.Libele;
+        // var dao=mapper.Map<ListeDAO>(liste);
+          db.Listes.Add(listeAAjouter);
+          await db.SaveChangesAsync();
+          return o;
     }
 
     public Task<Liste> GetAsync(Guid id)

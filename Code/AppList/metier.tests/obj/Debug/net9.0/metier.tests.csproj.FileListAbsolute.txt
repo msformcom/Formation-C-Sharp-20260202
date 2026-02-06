@@ -367,3 +367,7 @@ C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Dom\Desktop\Formations\Formation CSharp - 20260202\Formation C Sharp 20260202\Code\AppList\metier.tests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll

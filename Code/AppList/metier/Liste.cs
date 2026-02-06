@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 
 namespace Metier;
@@ -9,6 +10,10 @@ public class Liste
     {
         this.Libele = libele;
         this.MyElements = new();
+        this.MyElements.CollectionChanged += (o, e) =>
+        {
+            
+        };
     }
 
     #region Libele
@@ -31,7 +36,7 @@ public class Liste
     #endregion
 
       [DataMember(Name ="Elements")]
-    private List<ElementListe> MyElements { get; set; }
+    private ObservableCollection<ElementListe> MyElements { get; set; }
 
     public IEnumerable<ElementListe> Elements
     {
